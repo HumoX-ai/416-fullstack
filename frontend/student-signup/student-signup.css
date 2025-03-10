@@ -146,6 +146,23 @@ input:hover {
     border-color: #bbb;
 }
 
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 600px) {
     .card {
         padding: 30px 20px;
