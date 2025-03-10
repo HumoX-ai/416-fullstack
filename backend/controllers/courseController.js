@@ -24,7 +24,7 @@ exports.seeTeacherCourse = async (req, res) => {
             c.ImageURL,
             c.Price
         FROM Course c
-        WHERE c.TrainerID = ${TrainerID};
+        WHERE c.TrainerID = ${TrainerID} returning *;
 `)
 
         res.status(200).json(result.rows)
