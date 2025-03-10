@@ -59,7 +59,8 @@ exports.deleteStudent = async (req, res) => {
 }
 exports.getCourseDetails = async (req, res) => {
     try {
-
+      const CourseID = req.params.id;
+      const result = await pool.query
     } catch (error) {
 
     }
