@@ -24,7 +24,7 @@ exports.seeTeacherCourse = async (req, res) => {
             c.ImageURL,
             c.Price
         FROM Course c
-        WHERE c.TrainerID = ${TrainerID};
+        WHERE c.TrainerID = ${TrainerID} returning *;
 `)
 
         res.status(200).json(result.rows)
@@ -39,6 +39,8 @@ exports.allCourses = async (req, res) => {
         const result = await pool.query('SELECT * FROM Course')
         res.json(result.rows);
     } catch (error) {
+        console.log(error);
+        
         res.status(404).json('Serverda muammo')
         console.log(error);
 
