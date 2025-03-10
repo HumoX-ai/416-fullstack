@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5173;
 // Routelarni ulash
 app.use("/trainer", trainerRoutes);
 app.use("/student", studentRoutes);
-app.use('/api', courseRoutes);
+app.use('/courses', courseRoutes);
 
 // Serverni ishga tushirish
 app.listen(PORT, () => {
