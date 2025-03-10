@@ -6,7 +6,7 @@ const { signupTrainer, loginTrainer } = require('../controllers/trainerControlle
 const trainerRoutes = express.trainerRoutes()
 
 
-trainerRoutes.post('/trainer/signup', signupTrainer);
-trainerRoutes.post('/trainer/login', loginTrainer);
+trainerRoutes.post('/signup', signupTrainer);
+trainerRoutes.post('/login', loginTrainer);
 
 module.exports = trainerRoutes
