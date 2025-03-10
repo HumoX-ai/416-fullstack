@@ -1,7 +1,14 @@
-const express = require("express")
-const{addCourse,seeTeacherCourse,allCourses,registerStudent,deleteStudent,getCourseDetails} = require("../controllers/courseController")
+const express = require("express");
+const {
+  addCourse,
+  seeTeacherCourse,
+  allCourses,
+  registerStudent,
+  deleteStudent,
+  getCourseDetails,
+} = require("../controllers/courseController");
 const courses = express.Router();
-const authenticate = require('../middleware/authentication');
+const authenticate = require("../middleware/authontification");
 const router = express.Router();
 
 courses.post('/ ', authenticate, addCourse);
