@@ -27,4 +27,3 @@ exports.loginTrainer = async (req, res) => {
     res.json({ token });
 };
 
-module.exports = { signupTrainer, loginTrainer };

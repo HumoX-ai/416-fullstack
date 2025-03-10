@@ -27,4 +27,3 @@ exports.loginStudent = async (req, res) => {
     res.json({ token });
 };
 
-module.exports = { signupStudent, loginStudent };
