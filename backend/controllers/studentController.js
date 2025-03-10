@@ -23,7 +23,7 @@ exports.loginStudent = async (req, res) => {
     if (!student || !(await bcrypt.compare(Password, student.Password))) {
         return res.status(401).json({ message: 'Invalid credentials' });
     }
-    const token = jwt.sign({ id: student.id, role: 'student' }, 'secret_key', { expiresIn: '1h' });
+    const token = jwt.sign({ id: student.id, role: 'student' }, 'secret_key', { expiresIn: '3h' });
     res.json({ token });
 };
 
