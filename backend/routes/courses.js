@@ -8,13 +8,13 @@ const {
   getCourseDetails,
 } = require("../controllers/courseController");
 const courses = express.Router();
-// const authenticate = require("../middleware/authontification");
+const authenticate = require("../middleware/authontification");
 
-courses.post("/ ", addCourse);
-courses.get("/trainer/courses/:id", seeTeacherCourse);
-courses.get("/", allCourses);
-courses.post("/enroll", registerStudent);
-courses.post("/unenroll", deleteStudent);
-courses.get("/:id", getCourseDetails);
+courses.post("/", authenticate, addCourse);
+courses.get("/trainer/courses/:id", authenticate, seeTeacherCourse);
+courses.get("/", authenticate, allCourses);
+courses.post("/enroll", authenticate, registerStudent);
+courses.post("/unenroll", authenticate, deleteStudent);
+courses.get("/:id", authenticate, getCourseDetails);
 
 module.exports = courses;
