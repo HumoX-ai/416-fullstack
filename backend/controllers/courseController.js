@@ -36,9 +36,11 @@ exports.seeTeacherCourse = async (req, res) => {
 
 exports.allCourses = async (req, res) => {
     try {
-        const result = await pool.query('SELECT * FROM courses')
+        const result = await pool.query('SELECT * FROM Course')
         res.json(result.rows);
     } catch (error) {
+        console.log(error);
+        
         res.status(404).json('Serverda muammo')
     }
 }
