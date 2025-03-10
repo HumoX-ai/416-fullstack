@@ -3,7 +3,7 @@ const express = require('express');
 // Zafardan keladi
 const { signupTrainer, loginTrainer } = require('../controllers/trainerController');
 // Sardordan keladi
-const trainerRoutes = express.trainerRoutes()
+const trainerRoutes = express.Router()
 
 
 trainerRoutes.post('/signup', signupTrainer);
