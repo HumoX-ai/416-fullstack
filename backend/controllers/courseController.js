@@ -6,6 +6,8 @@ exports.addCourse = async (req, res) => {
         const TrainerID = req.params.id;
         const result = await pool.query('INSERT INTO Course (TrainerID, CourseName, Category, ImageURL, Price) VALUES ($1, $2, $3, $4, $5) RETURNING *'
         [TrainerID, CourseName, Category, ImageURL, Price]);
+        console.log(result);
+        
         res.status(201).json(result.rows[0]);
     } catch (error) {
         res.status(400).json('Kurs qo`shishda muammo bo`lib qoldi')
