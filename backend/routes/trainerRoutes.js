@@ -1,7 +1,7 @@
 const express = require('express');
 
 // Zafardan keladi
-const { getPhotos, myPhoto, addPhoto, deletPhoto } = require('../controllers/trainerController');
+const { _ } = require('../controllers/trainerController');
 // Sardordan keladi
 const { authentication } = require('../middleware/authontification');
 
