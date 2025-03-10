@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+dist/
+build/
+
+# Frontend specific
+.DS_Store
+/coverage
+.next/
+.nuxt/
+
+# Postgres
+*.log
+*.sql
+*.backup
+
+# General
+.env
+.DS_Store
