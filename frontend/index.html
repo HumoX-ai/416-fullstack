@@ -1,14 +1,45 @@
-<!-- frontend/index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon 2025 - Welcome</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <h1>Welcome</h1>
-    <a href="trainer-signup.html">Trainer Signup</a> |
-    <a href="student-signup.html">Student Signup</a> |
-    <a href="trainer-login.html">Trainer Login</a> |
-    <a href="student-login.html">Student Login</a>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
+      <h1 class="text-3xl font-bold text-gray-800 mb-6">
+        Welcome to Hackathon 2025
+      </h1>
+      <p class="text-gray-600 mb-8">
+        Join as a Trainer or Student to get started!
+      </p>
+      <div class="space-y-4">
+        <a
+          href="./trainer-signup/trainer-signup.html"
+          class="block w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition duration-300"
+        >
+          Trainer Signup
+        </a>
+        <a
+          href="./student-signup/student-signup.html"
+          class="block w-full bg-green-600 text-white py-3 px-4 rounded-md hover:bg-green-700 transition duration-300"
+        >
+          Student Signup
+        </a>
+        <a
+          href="./trainer-login/trainer-login.html"
+          class="block w-full bg-blue-400 text-white py-3 px-4 rounded-md hover:bg-blue-500 transition duration-300"
+        >
+          Trainer Login
+        </a>
+        <a
+          href="./student-login/student-login.html"
+          class="block w-full bg-green-400 text-white py-3 px-4 rounded-md hover:bg-green-500 transition duration-300"
+        >
+          Student Login
+        </a>
+      </div>
+    </div>
   </body>
 </html>
