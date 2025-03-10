@@ -1,5 +1,6 @@
 const express = require("express");
-const taskRoutes = require("./routes/taskRoutes");
+const trainerRoutes = require("./routes/trainerRoutes");
+const studentRoutes = require("./routes/studentRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -7,7 +8,8 @@ const PORT = process.env.PORT || 3000;
  app.use(express.json());
 
 // Routelarni ulash
-app.use("/api", taskRoutes);
+app.use("/trainer", trainerRoutes);
+app.use("/student", studentRoutes);
 
 // Serverni ishga tushirish
 app.listen(PORT, () => {
