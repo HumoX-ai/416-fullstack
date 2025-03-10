@@ -27,7 +27,7 @@ exports.seeTeacherCourse = async (req, res) => {
         WHERE c.TrainerID = ${TrainerID};
 `)
 
-res.status(200).json(result.rows)
+        res.status(200).json(result.rows)
     } catch (error) {
         res.status(404).json('Serverda muammo')
 
@@ -45,7 +45,8 @@ exports.allCourses = async (req, res) => {
 
 exports.registerStudent = async (req, res) => {
     try {
-
+        const { CourseID } = req.body;
+        const student_id = req.params.id
     } catch (error) {
 
     }
@@ -60,10 +61,21 @@ exports.deleteStudent = async (req, res) => {
 }
 exports.getCourseDetails = async (req, res) => {
     try {
-      const CourseID = req.params.id;
-      const result = await pool.query
+        const CourseID = req.params.id;
+        const course = await pool.query('SELECT * FROM Course WHERE id = $1', [CourseID]);
+        const student = await pool.query(`SELECT 
+        s.id AS StudentID,
+        s.FirstName,
+        s.LastName,
+        s.Username,
+        s.Age
+        FROM Enrollment e
+        JOIN Student s ON e.StudentID = s.id
+        WHERE e.CourseID = ${CourseID};
+    `);
+        res.status(200).json({ course: course.rows[0], student: student.rows })
     } catch (error) {
-
+        res.status(404).json('Malumot olishda xatolik')
     }
 }
 

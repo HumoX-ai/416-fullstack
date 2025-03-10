@@ -9,8 +9,7 @@ const {
 } = require("../controllers/courseController");
 const courses = express.Router();
 const authenticate = require("../middleware/authontification");
-const router = express.Router();
-
+ 
 courses.post('/ ', authenticate, addCourse);
 courses.get('/trainer/courses/:id', authenticate, seeTeacherCourse);
 courses.get('/', authenticate, allCourses);
