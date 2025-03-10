@@ -1,4 +1,4 @@
-/* Umumiy stil */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -15,7 +15,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Forma uchun stil */
+
 #trainer-login {
     background-color: #fff;
     padding: 20px;
@@ -25,7 +25,7 @@ h1 {
     max-width: 400px;
 }
 
-/* Input maydonlari uchun stil */
+
 #trainer-login input {
     width: 100%;
     padding: 10px;
@@ -42,7 +42,7 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Tugma uchun stil */
+
 #trainer-login button {
     width: 100%;
     padding: 10px;
@@ -59,7 +59,7 @@ h1 {
     background-color: #0056b3;
 }
 
-/* "No account? Sign up" havolasi uchun stil */
+
 .signup-link {
     text-align: center;
     margin-top: 10px;
@@ -77,7 +77,7 @@ h1 {
     text-decoration: underline;
 }
 
-/* Responsive stil */
+
 @media (max-width: 480px) {
     #trainer-login {
         padding: 15px;
