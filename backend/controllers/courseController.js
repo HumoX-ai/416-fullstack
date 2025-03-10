@@ -15,7 +15,7 @@ exports.addCourse = async (req, res) => {
 
 exports.seeTeacherCourse = async (req, res) => {
     try {
-        const TrainerID = req.user.id;
+        const TrainerID = req.params.id;
         const result = await pool.query(`
         SELECT 
             c.id AS CourseID,
