@@ -36,9 +36,10 @@ res.status(200).json(result.rows)
 
 exports.allCourses = async (req, res) => {
     try {
-
+        const result = await pool.query('SELECT * FROM courses')
+        res.json(result.rows);
     } catch (error) {
-
+        res.status(404).json('Serverda muammo')
     }
 }
 
